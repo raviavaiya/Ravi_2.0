@@ -1,9 +1,12 @@
 {
-    "name": "Ravi Avaiya Portfolio",
-    "short_name": "RA Portfolio",
-    "description": "Explore the impressive portfolio of Ravi Avaiya, a skilled Data Scientist and Penetration Scientist.",
-    "start_url": "/",
-    "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#3498db"
+  "version": 2,
+  "builds": [
+    { "src": "main.py", "use": "@vercel/python" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/main.py" }
+  ],
+  "env": {
+    "APP_MODULE": "main:app"
   }
+}
