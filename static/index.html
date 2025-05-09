@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+  <title>Ravi Avaiya | Portfolio</title>
+
+
+
+  <!-- Seo Details  -->
+
+  <meta name="author" content="Ravi Avaiya">
+  <meta name="robots" content="index, follow">
+  <meta property="og:url" content="https://raviavaiya-portfolio.netlify.app/">
+  <link rel="canonical" href="https://raviavaiya-portfolio.netlify.app/">
+  <meta property="og:title" content="ravi Avaiya | Portfolio">
+  <meta property="og:image" content="../assets/img/hero-bg.jpg">
+  <meta property="og:description"
+    content="Ravi Avaiya - Data Scientist | Crafting innovative Data-Driven solutions tailored to your needs. Expert in Data Science.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_IN">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="google-site-verification" content="w9idFm6SmgKZxLXYuFmzjuWlP0_BzUAoXQTDmp8yNlM" />
+  <meta
+    content="Ravi Avaiya - Data Scientist | Crafting innovative Data Solutions tailored to your needs. Expert in Data Science. Elevate your online presence with custom LLMs designed for success. Let's build your digital future together."
+    name="description">
+  <meta
+    content="Ravi Avaiya, Ravi Avaiya CEO, Ravi Avaiya Data Scientist, Ravi Avaiya Entrepreneur, Ravi Avaiya Portfolio, Ravi Avaiya Projects, Ravi Avaiya LinkedIn, Ravi Avaiya Personal Website, Ravi Avaiya Professional Profile, Ravi Avaiya Skills, Ravi Avaiya Expertise, Ravi Avaiya Biography, Ravi Avaiya Career, Ravi Avaiya Achievements, Ravi Avaiya Contributions, Ravi Avaiya Innovations, Ravi Avaiya Testimonials, Ravi Avaiya Recommendations, Ravi Avaiya Recognition, Ravi Avaiya Contact, Ravi Avaiya, Ravi Avaiya Company, Ravi Avaiya Services, Ravi Avaiya Data Science, Ravi Avaiya Machine-Learning, Ravi Avaiya Software Development, Ravi Avaiya Technology Solutions, Ravi Avaiya IT Services, Ravi Avaiya Digital Solutions, Ravi Avaiya Custom Deep-Learning-Model, Ravi Avaiya Creative Solutions, Ravi Avaiya Innovation, Ravi Avaiya Consulting, Ravi Avaiya Digital Agency, Ravi Avaiya Data Solutions, Ravi Avaiya E-commerce Solutions, Ravi Avaiya Mobile App Development, Ravi Avaiya Responsive Design, Ravi Avaiya SEO Services, Ravi Avaiya Branding Services, Ravi Avaiya portfolio, Ravi Sutariya, Data Scientist, portfolio, volunteer, social person, projects, community involvement"
+    name="keywords">
+
+
+
+  <!-- Instagram profile -->
+  <meta property="instagram:card" content="summary">
+  <meta property="instagram:title" content="Ravi Avaiya | Data Scientist Portfolio">
+  <meta property="instagram:description"
+    content="Explore the portfolio of Ravi Avaiya, Expert in Data Science. Elevate your online presence with custom websites designed for success. Let's build your digital future together.">
+  <meta property="instagram:image" content="https://www.instagram.com/ravi_avaiya/">
+  <meta property="instagram:author" content="Ravi Avaiya">
+
+  <!-- SEO End -->
+
+  <!-- Favicons -->
+  <link href="../assets/img/logo.jpg" rel="icon">
+  <link href="../assets/img/logo.jpg" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy"
+    rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy"
+    rel="stylesheet">
+
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <script>
+    // Function to hide the message box after a delay
+    function hideMessageBox() {
+      var messageBox = document.querySelector('.sent-message, .error-message');
+      if (messageBox) {
+        setTimeout(function () {
+          messageBox.style.display = 'none';
+        }, 5000); // 5000 milliseconds = 5 seconds
+      }
+    }
+
+    // Call the hideMessageBox function when the page loads
+    window.onload = function () {
+      hideMessageBox();
+    };
+  </script>
+
+
+  <script>
+    function sendmail(event) {
+      event.preventDefault();
+
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var subject = document.getElementById("subject").value;
+      var message = document.getElementById("message").value;
+
+      if (!name || !email || !subject || !message) {
+        alert("Please fill in all fields");
+        return false;
+      }
+
+      var params = {
+        from_name: name,
+        email_id: email,
+        subject: subject,
+        message: message
+      };
+
+      emailjs.send("service_t6dez1t", "template_vk0opsp", params).then(function (res) {
+
+        Toastify({
+          text: 'Your message has been sent. Thank you!',
+          duration: 3000,
+          gravity: 'top',
+          position: 'right',
+          backgroundColor: '#4CAF50',
+          stopOnFocus: true,
+        }).showToast();
+        document.getElementById("contact-form").reset(); // Clear the form
+      }).catch(function (err) {
+        alert("Failed to send email. Please try again later.");
+        document.querySelector(".error-message").style.display = "block";
+      });
+
+      return false;
+    }
+  </script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "xJ0yhPKDfzKHNQIEm",
+      });
+    })();
+  </script>
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex justify-content-center align-items-center header-transparent">
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+        <li><a class="nav-link scrollto" href="#about">About</a></li>
+        <li><a class="nav-link scrollto" href="#resume">Resume</a></li>
+        <li><a class="nav-link scrollto" href="#services">Services</a></li>
+        <li><a class="nav-link scrollto" href="#skills">Skills</a></li>
+        <li><a class="nav-link scrollto " href="#Projects">Projects</a></li>
+        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
+  </header><!-- End Header -->
+
+  <script>
+    function toggleChatbot() {
+      var popup = document.getElementById("chatbot-popup");
+      popup.classList.toggle("show");
+    }
+
+    // Auto show after 5 seconds
+    window.onload = function () {
+      setTimeout(function () {
+        var popup = document.getElementById("chatbot-popup");
+        popup.classList.add("show");
+      }, 5000);
+    };
+  </script>
+
+  <!-- Floating Icon -->
+  <!-- <div id="chatbot-icon" onclick="toggleChatbot()">💬</div> -->
+
+  <!-- Chat Popup -->
+  <!-- <div id="chatbot-popup">
+    <section>
+      <div class="container py-0">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header d-flex justify-content-between align-items-center p-3">
+                <h5 class="mb-0">Chat messages</h5>
+                <div class="d-flex flex-row align-items-center">
+                  <span class="badge bg-warning me-3">20</span>
+                  <i class="fas fa-minus me-3 text-muted fa-xs"></i>
+                  <i class="fas fa-comments me-3 text-muted fa-xs"></i>
+                  <i class="fas fa-times text-muted fa-xs" style="cursor:pointer;" onclick="toggleChatbot()"></i>
+                </div>
+              </div>
+              <div class="card-body" style="position: relative; height: 400px; overflow-y: auto;"> -->
+                <!-- Message 1 -->
+                <!-- <div class="d-flex justify-content-between">
+                  <p class="small mb-1">Timona Siera</p>
+                  <p class="small mb-1 text-muted">23 Jan 2:00 pm</p>
+                </div>
+                <div class="d-flex flex-row justify-content-start">
+                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava5-bg.webp"
+                    alt="avatar 1" style="width: 45px; height: 100%;">
+                  <div>
+                    <p class="small p-2 ms-3 mb-3 rounded-3 bg-body-tertiary">
+                      For what reason would it be advisable for me to think about business content?
+                    </p>
+                  </div>
+                </div> -->
+
+                <!-- Message 2 -->
+                <!-- <div class="d-flex justify-content-between">
+                  <p class="small mb-1 text-muted">23 Jan 2:05 pm</p>
+                  <p class="small mb-1">Johny Bullock</p>
+                </div>
+                <div class="d-flex flex-row justify-content-end mb-4 pt-1">
+                  <div>
+                    <p class="small p-2 me-3 mb-3 text-white rounded-3 bg-warning">
+                      Thank you for your believe in our supports
+                    </p>
+                  </div>
+                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp"
+                    alt="avatar 2" style="width: 45px; height: 100%;">
+                </div> -->
+            <!-- </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div> -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <h1>Ravi Avaiya</h1>
+      <h2>I'm a Data Scientist</h2>
+      <a href="#about" class="btn-scroll scrollto" title="Scroll Down"><i class="bx bx-chevron-down"></i></a>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+    <!-- ======= About Me Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-title">
+          <span>About Me</span>
+          <h2>About Me</h2>
+          <p>Passionate Data Scientist Crafting Engaging Digital Experiences</p>
+        </div>
+
+        <div class="row">
+          <div class="image col-lg-4 d-flex align-items-stretch justify-content-center justify-content-lg-start"></div>
+          <div class="col-lg-8 d-flex flex-column align-items-stretch">
+            <div class="content ps-lg-4 d-flex flex-column justify-content-center"><br>
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Name:</strong> <span>Ravi Avaiya</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Date Of Birth:</strong> <span>Augest 4, 2003</span>
+                    </li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <a
+                        href="https://raviavaiya-portfolio.vercel.app/"
+                        style="color:#3b434a"><span>raviavaiya-portfolio</span></a>
+                    </li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91 8799559020</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Surat, Gujarat, India</span>
+                    </li>
+
+                  </ul>
+                </div>
+
+                <div class="col-lg-6">
+                  <ul>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>21</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong><span>raviavaiya03@gmail.com</span>
+                    </li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Zipcode:</strong> <span>395008</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row mt-n4">
+                <div class="col-md-6 mt-5 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <i class="bi bi-emoji-smile" style="color: #20b38e;"></i>
+
+                    <span data-purecounter-start="0" data-purecounter-end="22" data-purecounter-duration="1"
+                      class="purecounter"></span>
+
+
+
+                    <p><strong>Happy Clients</strong> Successfully delivered quality services to satisfied clients.</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mt-5 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <i class="bi bi-journal-richtext" style="color: #8a1ac2;"></i>
+
+                    <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1"
+                      class="purecounter"></span>
+
+
+
+                    <p><strong>Projects</strong> Completed diverse projects with excellence and precision.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6 mt-5 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <i class="bi bi-clock" style="color: #2cbdee;"></i>
+
+                    <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1"
+                      class="purecounter"></span>
+
+
+
+                    <p><strong>Years of experience</strong> Bringing two years of expertise in the industry.</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mt-5 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <i class="bi bi-award" style="color: #ffb459;"></i>
+
+                    <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1"
+                      class="purecounter"></span>
+
+
+
+                    <p><strong>Awards</strong> Recognized with five prestigious awards for outstanding work.</p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+      </div>
+    </section><!-- End About Me Section -->
+
+    <!-- ======= My Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
+        <div class="section-title">
+          <span>My Resume</span>
+          <h2>My Resume</h2>
+          <p>Step into a World of Experience, Expertise, and Education, Where Achievements Unfold and Skills Shine.
+            <br>Explore the Journey that Shapes My Professional Profile and Unveils a Passion for Growth and Innovation
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="resume-title">Higher Education Degrees</h3>
+            <div class="resume-item">
+              <h4>MCA In Computer Science &amp; It</h4>
+              <h5>2024 - Current</h5>
+              <p><em>JAIN (Deemed-to-be University), Bengaluru, Karnataka, India</em></p>
+              <p>As the top technology institute in India, it prepares you to become the best and stand out from the
+                rest. With a campus that supports your vision with a quality education which stands tall and strong on
+                the pillars of practical work, fully equipped modern labs, libraries, and top-notch faculty.</p>
+              <p>I am made the best choice for pursuing degree education with JAIN (Deemed-to-be University).It has
+                high-end lab facilities, encouraging faculty and an overall inspiring campus that brings out the best in
+                you.</p>
+            </div>
+
+            <div class="resume-item">
+              <h4>Bachelor of Computer Science ( It )</h4>
+              <h5>2021 - 2024</h5>
+              <p><em>UKA Tarsadia University , Bardoli, Gujarat, India</em></p>
+              <p>Babu Madhav Institute of Information Technology's (BMIIT) B.Sc. in IT program has equipped me with
+                proficiency in programming languages, Data Science technologies, database management systems, and
+                networking concepts, along with strong problem-solving and communication skills.</p>
+              <p>With an outstanding academic achievement. successfully completed my degree in B.Sc. in IT from Uka
+                Tarsadia University.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h3 class="resume-title">School Education</h3>
+            <div class="resume-item">
+              <h4>12<sup>th</sup> (Higher Secondary Examination)</h4>
+              <h5>2020 - 2021</h5>
+              <p><em>GUJARAT SECONDARY AND HIGHER SECONDARY EDUCATION BOARD</em></p>
+              <p>Successfully cleared 12th board (HSC) exam with an impressive 66% in the commerce stream at Gujarat
+                Secondary and Higher Secondary Board (Ashadeep Group of Schools, Surat), showcasing my strong academic
+                performance and dedication to the field of commerce.</p>
+            </div>
+            <div class="resume-item">
+              <h4>10<sup>th</sup> (Secondary School Examination)</h4>
+              <h5>2018 - 2019</h5>
+              <p><em>GUJARAT SECONDARY AND HIGHER SECONDARY EDUCATION BOARD</em></p>
+              <p>I achieved remarkable success in my 10th board (SSC) exam, securing an impressive 86% overall in my
+                studies at Gujarat Secondary and Higher Secondary Board (Ashadeep Group of Schools, Surat).
+              </p>
+              <p> This demonstrates my commitment to academic excellence and a strong foundation in various subjects.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="resume-title">Certification Education Degrees</h3>
+            <div class="resume-item">
+              <h4>Diploma in Data Science &amp; Artificial Intelligence</h4>
+              <h5>2024</h5>
+              <p><em>BIA ( Boston Institute of Analytics ) - Surat, Gujarat, India</em></p>
+              <p>The Boston Institute of Analytics (BIA) offers a globally recognized program that provides hands-on
+                experience in data science and artificial intelligence. The course emphasizes practical learning through
+                industry-relevant projects, expert-led training, and real-world applications of AI and machine learning.
+              </p>
+              <p>With a cutting-edge curriculum, experienced faculty, and state-of-the-art learning resources, BIA
+                equips students with the necessary skills to excel in data-driven careers. The program fosters
+                analytical thinking, problem-solving, and technical expertise, preparing students for success in the
+                evolving world of data science.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End My Resume Section -->
+
+    <!-- ======= My Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <span>My Services</span>
+          <h2>My Services</h2>
+          <p>Elevating Standards: Unleashing the Power of Our Best Services, Delivering Unmatched Quality, Innovation,
+            and Customer Satisfaction.<br>Experience Excellence Redefined, Tailored to Meet Your Unique Needs.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bxl-python"></i></div>
+              <h4 class="title"><a href="#">Python</a></h4>
+              <p class="description">As a passionate python Developer, I specialize in creating visually appealing and
+                user-friendly Algorithm that provide a seamless user experience.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-data"></i></div>
+              <h4 class="title"><a href="#">Data Analyst</a></h4>
+              <p class="description">My expertise lies in creating scalable, secure, and efficient solutions that drive
+                business success and deliver a superior user experience.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-command"></i></div>
+              <h4 class="title"><a href="#">Machine Learning</a></h4>
+              <p class="description">As a ML developer, I specialize in creating innovative and user-friendly
+                Algorithms that offer seamless experiences across good accuracy.</p>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-objects-vertical-bottom"></i></div>
+              <!-- Icon representing PowerBI (Microsoft-related icon) -->
+              <h4 class="title"><a href="#">Power BI Development</a></h4>
+              <p class="description">I specialize in developing dynamic Power BI dashboards that provide actionable
+                insights through interactive and intuitive data visualizations, empowering business decisions.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-command"></i></div> <!-- Icon representing AI/NLP -->
+              <h4 class="title"><a href="#">Natural Language Processing</a></h4>
+              <p class="description">With expertise in NLP, I design and develop solutions that process and understand
+                human language, enabling sentiment analysis, text classification, and conversational AI models.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-bot"></i></div>
+              <!-- Icon representing chat or messaging (chatbot development) -->
+              <h4 class="title"><a href="#">Chatbot Development</a></h4>
+              <p class="description">As a chatbot developer, I build AI-driven chatbots that offer efficient, accurate,
+                and personalized user experiences across various platforms, ensuring smooth interaction and customer
+                satisfaction.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End My Services Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <!-- <section id="testimonials" class="testimonials">
+      <div class="container position-relative">
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="../assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium
+                  quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="../assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis
+                  quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="../assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim
+                  tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="../assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit
+                  minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="../assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa
+                  labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section> 
+    <-- End Testimonials Section -->
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="skill">
+      <div class="container">
+        <div class="section-title">
+          <span>Skills</span>
+          <h2>My Skills</h2>
+          <p>Unleashing the Power of Skills: Showcasing a Diverse Arsenal of Expertise, Innovation, and
+            Problem-Solving.<br> Explore a Spectrum of Proficiencies that Drive Results and Fuel Success</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <div class="skills-content ps-lg-4">
+              <div class="progress">
+                <span class="skill">Microsoft 365<i class="val">100%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                    aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill">SQl<i class="val">90%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill">Power bi <i class="val">80%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill">tableu <i class="val">80%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="skills-content ps-lg-4">
+              <div class="progress">
+                <span class="skill">Python <i class="val">90%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill">Asp.Net<i class="val">90%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill">Html<i class="val">90%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill">CSS <i class="val">75%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End My Skills Section -->
+
+    <!-- ======= My Projects Section ======= -->
+    <section id="Projects" class="portfolio">
+      <div class="container">
+        <div class="section-title">
+          <span>Projects</span>
+          <h2>Projects</h2>
+          <p>Unleashing the Power of Skills: Showcasing a Diverse Arsenal of Expertise, Innovation, and
+            Problem-Solving.<br> Explore a Spectrum of Proficiencies that Drive Results and Fuel Success</p>
+        </div>
+
+        <div class="row portfolio-container">
+          <a href="https://www.kaggle.com/code/raviavaiya/car-data-analysis-multiple-linear-regression" target="_blank">
+            <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+
+              <div class="portfolio-img"><img src="../assets/img/portfolio/carprediction.jpeg" class="img-fluid" alt="">
+              </div>
+              <div class="portfolio-info">
+                <h4>Car Price Prediction</h4>
+                <p>Machine Learning</p>
+
+                <a href="../assets/img/portfolio/carprediction.jpeg" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox preview-link" title="Car Price Prediction - Machine Learning"><i
+                    class="bx bx-plus"></i></a>
+                <a href="https://www.kaggle.com/code/raviavaiya/car-data-analysis-multiple-linear-regression"
+                  target="_blank" class="details-link" title="More Details"><i class="bx bxl-github"></i></a>
+
+                <a href="../assets/img/portfolio/carprediction.jpeg" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox preview-link" title="Car Price Prediction - Machine Learning"><i
+                    class="bx bx-plus"></i></a>
+                <a href="https://www.kaggle.com/code/raviavaiya/car-data-analysis-multiple-linear-regression"
+                  target="_blank" class="details-link" title="More Details"><i class="bx bxl-github"></i></a>
+
+              </div>
+
+            </div>
+          </a>
+          <a href="https://github.com/raviavaiya/Weather-Summary-Classification" target="_blank">
+            <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+              <div class="portfolio-img"><img src="../assets/img/portfolio/weather.jpeg" class="img-fluid" alt="">
+              </div>
+              <div class="portfolio-info">
+                <h4>Weather Summary Prediction</h4>
+                <p>Machine Learning</p>
+
+                <a href="../assets/img/portfolio/weather.jpeg" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox preview-link" title="Weather Summary Prediction - Machine Learning"><i
+                    class="bx bx-plus"></i></a>
+                <a href="https://github.com/raviavaiya/Weather-Summary-Classification" target="_blank"
+                  class="details-link" title="More Details"><i class="bx bxl-github"></i></a>
+
+                <a href="../assets/img/portfolio/weather.jpeg" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox preview-link" title="Weather Summary Prediction - Machine Learning"><i
+                    class="bx bx-plus"></i></a>
+                <a href="https://github.com/raviavaiya/Weather-Summary-Classification" target="_blank"
+                  class="details-link" title="More Details"><i class="bx bxl-github"></i></a>
+
+              </div>
+            </div>
+          </a>
+
+          <a href="https://github.com/raviavaiya/Prime-Video-Analysis" target="_blank">
+            <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+              <div class="portfolio-img"><img src="../assets/img/portfolio/amazondashboard.jpeg" class="img-fluid" alt="">
+              </div>
+              <div class="portfolio-info">
+                <h4>Amazon Prime analysis</h4>
+                <p>PowerBI</p>
+
+                <a href="../assets/img/portfolio/amazondashboard.jpeg" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox preview-link" title="Amazon Prime analysis - PowerBI"><i
+                    class="bx bx-plus"></i></a>
+                <a href="https://github.com/raviavaiya/Prime-Video-Analysis" target="_blank" class="details-link"
+                  title="More Details"><i class="bx bxl-github"></i></a>
+
+                <a href="../assets/img/portfolio/amazondashboard.jpeg" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox preview-link" title="Amazon Prime analysis - PowerBI"><i
+                    class="bx bx-plus"></i></a>
+                <a href="https://github.com/raviavaiya/Prime-Video-Analysis" target="_blank" class="details-link"
+                  title="More Details"><i class="bx bxl-github"></i></a>
+
+              </div>
+            </div>
+          </a>
+          <a href="https://github.com/raviavaiya/Movie-Recommendation-System" target="_blank">
+            <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+              <div class="portfolio-img"><img src="../assets/img/portfolio/movie.webp" class="img-fluid" alt="">
+              </div>
+              <div class="portfolio-info">
+                <h4>Movie Recommendation System</h4>
+                <p>Machine Learning</p>
+
+                <a href="../assets/img/portfolio/movie.webp" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox preview-link" title="Movie Recommendation System - Machine Learning"><i
+                    class="bx bx-plus"></i></a>
+                <a href="https://github.com/raviavaiya/Movie-Recommendation-System" target="_blank" class="details-link"
+                  title="More Details"><i class="bx bxl-github"></i></a>
+
+                <a href="../assets/img/portfolio/movie.webp" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox preview-link" title="Movie Recommendation System - Machine Learning"><i
+                    class="bx bx-plus"></i></a>
+                <a href="https://github.com/raviavaiya/Movie-Recommendation-System" target="_blank" class="details-link"
+                  title="More Details"><i class="bx bxl-github"></i></a>
+              </div>
+            </div>
+          </a>
+          <div class="col-lg-1 col-md-6 portfolio-item filter-card">
+
+            <!-- <div class="portfolio-img"><img src="../assets/img/portfolio/carprediction.jpeg" class="img-fluid" alt="">
+            </div>
+            <div class="portfolio-info">
+              <h4>Car Price Prediction</h4>
+              <p>Machine Learning</p>
+
+              <a href="../assets/img/portfolio/carprediction.jpeg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="Car Price Prediction - Machine Learning"><i
+                  class="bx bx-plus"></i></a>
+              <a href="https://www.kaggle.com/code/raviavaiya/car-data-analysis-multiple-linear-regression"
+                target="_blank" class="details-link" title="More Details"><i class="bx bxl-github"></i></a>
+
+              <a href="../assets/img/portfolio/carprediction.jpeg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="Car Price Prediction - Machine Learning"><i
+                  class="bx bx-plus"></i></a>
+              <a href="https://www.kaggle.com/code/raviavaiya/car-data-analysis-multiple-linear-regression"
+                target="_blank" class="details-link" title="More Details"><i class="bx bxl-github"></i></a>
+
+            </div> -->
+
+          </div>
+          <a href="https://github.com/raviavaiya/Chat-PDF" target="_blank">>
+            <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+
+              <div class="portfolio-img"><img src="../assets/img/portfolio/Chat History.png" class="img-fluid" alt="">
+              </div>
+              <div class="portfolio-info">
+                <h4>Chat With PDF</h4>
+                <p>RAG Agent</p>
+
+                <a href="../assets/img/portfolio/Chat History.png" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox preview-link" title="Chat With PDF - Generative AI"><i
+                    class="bx bx-plus"></i></a>
+                <a href="https://github.com/raviavaiya/Chat-PDF" target="_blank" class="details-link"
+                  title="More Details"><i class="bx bxl-github"></i></a>
+
+                <a href="../assets/img/portfolio/Chat History.png" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox preview-link" title="Chat With PDF - Generative AI"><i
+                    class="bx bx-plus"></i></a>
+                <a href="https://github.com/raviavaiya/Chat-PDF" target="_blank" class="details-link"
+                  title="More Details"><i class="bx bxl-github"></i></a>
+
+              </div>
+
+            </div>
+          </a>
+          <a href="https://github.com/raviavaiya/Travel-Genius-Your-Intelligent-Trip-Planner-and-Guide"
+            target="_blank">>
+            <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+
+              <div class="portfolio-img"><img src="../assets/img/portfolio/travel.jpeg" class="img-fluid" alt="">
+              </div>
+              <div class="portfolio-info">
+                <h4>Travel Assistant</h4>
+                <p>RAG Agent</p>
+
+                <a href="../assets/img/portfolio/travel.jpeg" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox preview-link" title="Travel Assistant - Generative AI"><i
+                    class="bx bx-plus"></i></a>
+                <a href="https://github.com/raviavaiya/Travel-Genius-Your-Intelligent-Trip-Planner-and-Guide"
+                  target="_blank" class="details-link" title="More Details"><i class="bx bxl-github"></i></a>
+
+                <a href="../assets/img/portfolio/travel.jpeg" data-gallery="portfolioGallery"
+                  class="portfolio-lightbox preview-link" title="Travel Assistant - Generative AI"><i
+                    class="bx bx-plus"></i></a>
+                <a href="https://github.com/raviavaiya/Travel-Genius-Your-Intelligent-Trip-Planner-and-Guide"
+                  target="_blank" class="details-link" title="More Details"><i class="bx bxl-github"></i></a>
+
+              </div>
+
+            </div>
+          </a>
+          <div class="col-lg-3 col-md-6 portfolio-item filter-card">
+            <!-- 
+            <div class="portfolio-img"><img src="../assets/img/portfolio/carprediction.jpeg" class="img-fluid" alt="">
+            </div>
+            <div class="portfolio-info">
+              <h4>Car Price Prediction</h4>
+              <p>Machine Learning</p>
+
+              <a href="../assets/img/portfolio/carprediction.jpeg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="Car Price Prediction - Machine Learning"><i
+                  class="bx bx-plus"></i></a>
+              <a href="https://www.kaggle.com/code/raviavaiya/car-data-analysis-multiple-linear-regression"
+                target="_blank" class="details-link" title="More Details"><i class="bx bxl-github"></i></a>
+
+              <a href="../assets/img/portfolio/carprediction.jpeg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="Car Price Prediction - Machine Learning"><i
+                  class="bx bx-plus"></i></a>
+              <a href="https://www.kaggle.com/code/raviavaiya/car-data-analysis-multiple-linear-regression"
+                target="_blank" class="details-link" title="More Details"><i class="bx bxl-github"></i></a>
+
+            </div> -->
+
+          </div>
+        </div>
+
+      </div>
+
+
+    </section><!-- End My Projects Section -->
+
+
+    <!-- ======= Contact Me Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <span>Contact Me</span>
+          <h2>Contact Me</h2>
+          <p>Get in touch for collaboration, support, or any inquiries - let's bring your vision to life!</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="info-box">
+                  <i class="bx bx-share-alt"></i>
+                  <h3>Social Profiles</h3>
+                  <div class="social-links">
+                    <a href="https://github.com/raviavaiya" target="_blank" class="github"><i
+                        class="bi bi-github"></i></a>
+                    <a href="https://x.com/Raviavaiya" target="_blank" class="twitter"><i
+                        class="bi bi-twitter-x"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61550710745021" target="_blank" class="facebook"><i
+                        class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/ravi_avaiya/" target="_blank" class="instagram"><i
+                        class="bi bi-instagram"></i></a>
+                    <a href="https://join.skype.com/invite/vShELydDEEVs" target="_blank" class="google-plus"><i
+                        class="bi bi-skype"></i></a>
+                    <a href="https://www.linkedin.com/in/ravi-avaiya-059b82249/" target="_blank" class="linkedin"><i
+                        class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4"><a href="mailto:raviavaiya03@gmail.com">
+
+                    <i class="bx bx-envelope"></i>
+                    <h3>Email Me</h3>
+                  </a>
+
+
+
+                  <p>raviavaiya03@gmail.com</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4">
+                  <a href="tel:918799559020">
+
+                    <i class="bx bx-phone-call"></i>
+                    <h3>Call Me</h3>
+                  </a>
+                  <p>+91 8799559020</p>
+
+
+
+
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <form onsubmit="return sendmail(event)" role="form" class="php-email-form" id="contact-form">
+
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+
+                <textarea class="form-control" name="message" id="message" rows="6" placeholder="Message"
+                  required></textarea>
+
+
+
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+
+              <div class="text-center"><button type="submit">Send Message</button>
+              </div>
+
+
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Me Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <h3>Ravi Avaiya</h3>
+      <p>I'm Ravi Avaiya, a dedicated Data Scientist with a passion for crafting exceptional digital experiences.
+        <br>With expertise in a variety of technologies, I specialize in Data Science.
+      </p>
+      <div class="social-links">
+        <a href="https://github.com/raviavaiya" target="_blank" class="twitter"><i class="bx bxl-github"></i></a>
+        <a href="https://x.com/Raviavaiya" target="_blank" class="twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61550710745021" target="_blank" class="facebook"><i
+            class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/ravi_avaiya/" target="_blank" class="instagram"><i
+            class="bx bxl-instagram"></i></a>
+        <a href="https://join.skype.com/invite/vShELydDEEVs" target="_blank" class="google-plus"><i
+            class="bx bxl-skype"></i></a>
+        <a href="https://www.linkedin.com/in/ravi-avaiya-059b82249/" target="_blank" class="linkedin"><i
+            class="bx bxl-linkedin"></i></a>
+      </div>
+      <div class="copyright">
+        &copy; Copyright <strong><span>Artech</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <a href="#">Artech Solutions</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
